@@ -4,21 +4,21 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Hello</title>
+<title>Poids</title>
 </head>
-<body bgcolor="#22d4b1">
-<% if ((request.getParameter("nom") == null) || (request.getParameter("nom").equals(""))) { %>
-<p>
-<b>Pas de nom! Entrer votre nom </b>
-<% }else{ %>
-<%! String nom; %>
+<body>
+<%! float taille; String genre; %>
 <%
-nom = request.getParameter("nom");
-%>
-<p>
-<b> Hello  </b>
-  <%= nom %>
+taille = Float.parseFloat(request.getParameter("taille"));
+genre = request.getParameter("genre");
 
+if (genre.equals("homme")){
+%>
+Votre poids idéel est <%= (62.1 * taille) - 44.7 %> kg.
+<%
+}else{
+%>
+Votre poids idéel est <%= (72.7 * taille) - 58 %> kg.
 <%} %>
 </body>
 </html>

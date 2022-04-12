@@ -10,19 +10,19 @@
 	
 <%! int n=10; %>
 
-<center><h3> Damier de 10 lignes par 10 colonnes </h3></center> 
+<center><h3> Damier de <%=n %> lignes par <%=n %> colonnes </h3></center> 
 <table border="2" align="center">
 	<%for ( int i = 0; i < n; i++){ %>
 	<tr>
 		<%for (int j =0; j< n ; j++) { %>
          	<% if (((j % 2) != 0 ) && (i % 2) == 0 ) { %> 
          
-         		<td bgcolor="white"> &nbsp; &nbsp; &nbsp; </td>
-         		<td bgcolor="black"> &nbsp; &nbsp; &nbsp;  </td>
+         		<td bgcolor="white" width="20px" height="20px"> </td>
+         		<td bgcolor="black" width="20px" height="20px"> </td>
          
          	<% } else if(((j % 2) != 0 ) && (i % 2) != 0 )  { %>
-         		<td bgcolor="black"> &nbsp; &nbsp; &nbsp; </td>
-         		<td bgcolor="white"> &nbsp; &nbsp; &nbsp; </td>
+         		<td bgcolor="black" width="20px" height="20px"> </td>
+         		<td bgcolor="white" width="20px" height="20px"> </td>
          <%} }%>
       </tr>
       <%} %>

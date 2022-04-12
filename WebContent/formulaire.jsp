@@ -7,7 +7,7 @@
 <title>formulaire</title>
 </head>
 <body bgcolor="#ffffcc">
-<% if ((request.getParameter("Nom")==null) && (request.getParameter("Email")==null)) { %>
+<% if ((request.getParameter("Nom")==null) && (request.getParameter("Email")==null)|| (request.getParameter("Nom").equals(""))|| (request.getParameter("Email").equals(""))) { %>
 <p>
 <b>Vous n'avez fourni aucune information</b>
 <% }else{ %>
@@ -17,9 +17,9 @@ nom = request.getParameter("Nom");
 email = request.getParameter("Email");
 %>
 <p>
-<b> Vous avez fourni les informations suivantes</b>
-<p><b>Nom:</b><%= nom %>
-<P><b>Email:</b><%= email%>
+<b> Vous avez fourni les informations suivantes :</b>
+<p><b>Nom: </b><%=  nom %>
+<P><b>Email: </b><%= email%>
 <%} %>
 </body>
 </html>
